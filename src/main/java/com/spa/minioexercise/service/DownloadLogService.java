@@ -4,7 +4,6 @@ import com.spa.minioexercise.entity.DownloadLogs;
 import com.spa.minioexercise.dao.DownloadLogsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import sun.security.util.Debug;
 
 @Service
 public class DownloadLogService {
@@ -15,6 +14,5 @@ public class DownloadLogService {
     public void saveDownloadLog(String objectName) {
         DownloadLogs downloadLogs = new DownloadLogs(objectName);
         downloadLogsRepository.save(downloadLogs);
-        Debug.println("debug ","am ajuns aici");
     }
 }
